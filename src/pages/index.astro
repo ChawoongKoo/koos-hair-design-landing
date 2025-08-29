@@ -1,18 +1,10 @@
 ---
-import './global.css'
+import BaseLayout from '../layouts/BaseLayout.astro';
 const pageTitle = "Koo's Wigs";
 ---
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{pageTitle}</title>
-	</head>
-	<body>
-		<div id="banner">
-			<h1 id="title">{pageTitle}</h1>	
-		</div>
-		<h2>hi</h2>
-	</body>
-</html>
+<BaseLayout pageTitle={pageTitle}>
+	<div id="banner">
+		<h1 id="title">{pageTitle}</h1>	
+	</div>
+	<h2>hi</h2>
+</BaseLayout>
