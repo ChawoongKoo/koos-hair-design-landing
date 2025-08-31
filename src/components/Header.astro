@@ -1,28 +1,34 @@
 ---
 ---
 <header class="Header">
-    <a href="/">Home</a>
-    <a href="/about">About</a>
-    <a href="/faq">FAQ</a>
-    <a href="/contact">Contact</a>
+    <img src="/koo_salon.svg" alt="Koo salon logo">
+    <nav><a href="/">Home</a></nav>
+    <nav><a href="/about">About</a></nav>
+    <nav><a href="/faq">FAQ</a></nav>
+    <nav><a href="/contact">Contact</a></nav>
 </header>
 <style>
     .Header {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         background-color: gray;
-        height: 3em;
+        height: 10vh;
         
         position: relative;
         top: 0;
         left: 0;
-        width: 100%;
+        width: 100vw;
     }
     a {
         text-decoration: none;
         font-size: 1em;
         color: blue;
-        padding-inline: 1.5em;
+        padding-inline: 1em;
+    }
+    img {
+        height:4em;
+        padding: 0;
+        margin: 0;
     }
 </style>

@@ -4,14 +4,20 @@ const pageTitle = "Koo's Wigs";
 ---
 <BaseLayout pageTitle={pageTitle}>
 	<div id="hero">
-		<h1 id="title">{pageTitle}</h1>	
-		<h1 id="motto">Clean. Quick. Quality.</h1>
-		<h2 id="description">Hair solutions and styling for any occasion, for a price that works for you</h2>
+		<div class="half">
+			<h1 id="motto">Clean. Quick. Quality.</h1>
+			<h2 id="description">Decades of experience. Hair solutions and styling for any occasion, for a price that works for you</h2>
+		</div>
+		<div class="half">
+			blah blah blah
+		</div>
 	</div>
+
 	<div id="solutions">
 		<h1>Solutions</h1>
 		<h2>We do everything to make you look and feel your best</h2>
 	</div>
+
 	<div id="stylings">
 		<h1>Styling</h1>
 		<h2>Our cosmological professionals do your hair your way</h2>
@@ -20,7 +26,6 @@ const pageTitle = "Koo's Wigs";
 <style>
 	#hero {
 		display: flex;
-		flex-direction: column;
 		place-items: flex-start;
 
 		padding: 0;
@@ -33,6 +38,9 @@ const pageTitle = "Koo's Wigs";
 		background-position: center;
 		background-size: 100% 100%;
 		background-repeat: no-repeat;
+	}
+	.half {
+		flex: 1;
 	}
 
 	#title {
