@@ -1,34 +1,50 @@
 ---
+import Hamburger from "./Hamburger.astro";
 ---
-<header class="Header">
-    <img src="/koo_salon.svg" alt="Koo salon logo">
-    <nav><a href="/">Home</a></nav>
-    <nav><a href="/about">About</a></nav>
-    <nav><a href="/faq">FAQ</a></nav>
-    <nav><a href="/contact">Contact</a></nav>
+
+<header class="header">
+    <Hamburger />
+    <div class="nav-links">
+        <nav><a href="/">Home</a></nav>
+        <nav><a href="/about">About</a></nav>
+        <nav><a href="/faq">FAQ</a></nav>
+        <nav><a href="/contact">Contact</a></nav>
+    </div>
+    <img src="/koo_salon.svg" alt="Koo salon logo" />
 </header>
+
 <style>
-    .Header {
+    .header {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background-color: gray;
-        height: 10vh;
-        
+        background-color: rgba(128, 128, 128, 0.5);
+
         position: relative;
         top: 0;
         left: 0;
         width: 100vw;
+        height: 5vh;
     }
-    a {
+    .header img {
+        height: 70%;
+        padding: 0;
+        margin: 0;
+    }
+    .nav-links {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    .nav-links a {
         text-decoration: none;
         font-size: 1em;
         color: blue;
         padding-inline: 1em;
     }
-    img {
-        height:4em;
-        padding: 0;
-        margin: 0;
+
+    .expanded {
+        display: flex;
     }
 </style>
