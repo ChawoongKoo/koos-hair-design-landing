@@ -10,7 +10,7 @@ import Hamburger from "./Hamburger.astro";
         <nav><a href="/faq">FAQ</a></nav>
         <nav><a href="/contact">Contact</a></nav>
     </div>
-    <img src="/koo_salon.svg" alt="Koo salon logo" />
+    <img src="/koo_salon.svg" alt="Koo salon logo" class="logo"/>
 </header>
 
 <style>
@@ -24,24 +24,25 @@ import Hamburger from "./Hamburger.astro";
         top: 0;
         left: 0;
         width: 100vw;
-        height: 5vh;
+        height: 10vh;
+        overflow-x: hidden;
     }
-    .header img {
-        height: 70%;
+    .header .logo {
+        height: 3em;
         padding: 0;
         margin: 0;
     }
     .nav-links {
         display: none;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
     }
     .nav-links a {
         text-decoration: none;
         font-size: 1em;
         color: blue;
         padding-inline: 1em;
+    }
+    .nav-links nav {
+        width: 4em;
     }
 
     .expanded {
