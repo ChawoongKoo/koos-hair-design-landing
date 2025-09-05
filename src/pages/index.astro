@@ -6,14 +6,37 @@ const pageTitle = "Koo's Wigs";
 
 <BaseLayout pageTitle={pageTitle}>
     <Hero />
-    <div id="solutions">
+    <div class="solutions">
         <h1>Solutions</h1>
-        <h2>We do everything to make you look and feel your best</h2>
+        <h2>We do everything to make you look and feel your best. We offer everything from 100% human hair and lace front to products for men and children. Whatever to match the occasion and pricepoint.</h2>
     </div>
 
-    <div id="stylings">
+    <div class="stylings">
         <h1>Styling</h1>
-        <h2>Our cosmological professionals do your hair your way</h2>
+        <h2 class=>Our cosmological professionals do your hair your way. Our services include:</h2>
+        <div class="service-list">
+            <ul>
+                <li>Cuts</li>
+                <li>Braids</li>
+                <li>Rows</li>
+            </ul>
+            <ul>
+                <li>Perms</li>
+                <li>Nails</li>
+                <li>And more...</li>
+            </ul>
+        </div>
     </div>
 </BaseLayout>
-<style></style>
+<style>
+    .stylings h2 {
+        margin-bottom: 0;
+    }
+    .service-list {
+        display: flex;
+        flex-direction: row;
+        justify-content:left;
+        margin: 0;
+        font-size: 1.4em;
+    }
+</style>
