@@ -3,45 +3,59 @@
 ---
 
 <footer class="Footer">
-    <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/faq">FAQ</a></li>
-        <li><a href="/contact">Contact</a></li>
-    </ul>
-    <address>
-        Address<br />
-        Address<br />
-        Address
-    </address>
+    <div class="contact-info">
+        <address>
+            11160 Veirs Mill Rd<br />
+            Wheaton, MD 20902<br />
+            (301) 933-4522
+        </address>
+        <div class="hours">
+            Mon-Thur 10AM-8PM<br>
+            Fri-Sat 10AM-9PM<br>
+            Sunday 10AM-7PM<br>
+        </div>
+    </div>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/faq">FAQ</a>
+        <a href="/contact">Contact</a>
+    </nav>
 </footer>
 <style>
     .Footer {
         display: flex;
-        align-items: flex-start;
         justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
         background-color: gray;
-        height: 3em;
+        height: 15vh;
 
         position: relative;
         bottom: 0;
         left: 0;
         width: 100%;
     }
+    nav {
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        margin-bottom: 1vh;
+    }
     a {
-        font-size: 0.3em;
+        font-size: 1.5em;
         color: blue;
         text-decoration: none;
     }
-    ul {
-        padding-top: 0.2%;
-        padding-left: 1.5%;
-        font-size: 0.1em;
-        margin: 0;
+    .contact-info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        width: 90%;
+        margin-top: 1vh;
     }
     address {
-        font-size: 0.5em;
-        padding-top: 0.2%;
-        padding-right: 1.5%;
+        font-size: 1em;
     }
 </style>
