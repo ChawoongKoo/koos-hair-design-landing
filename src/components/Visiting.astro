@@ -1,3 +1,88 @@
+---
+const address = "westfield wheaton maryland";
+const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
+---
+
 <div class="visiting" id="visiting">
-    visiting
+    <h1>Visit Us</h1>
+    <h2>
+        We're located inside Wheaton Mall <br />
+        Find us on the ground floor next to Target!
+    </h2>
+
+    <a class="location" href={mapsUrl} target="_blank">
+        <h2 class="address">
+            11160 Veirs Mill Rd<br />
+            Wheaton, MD 20902
+        </h2>
+    </a>
+    <a class="number" href="tel:3019334522"><h2>(301) 933-4522</h2></a>
+
+    <table class="hours">
+        <tr>
+            <td>Monday</td>
+            <td>10:00 AM - 8:00 PM</td>
+        </tr>
+        <tr>
+            <td>Tuesday</td>
+            <td>10:00 AM - 8:00 PM</td>
+        </tr>
+        <tr>
+            <td>Wednesday</td>
+            <td>10:00 AM - 8:00 PM</td>
+        </tr>
+        <tr>
+            <td>Thursday</td>
+            <td>10:00 AM - 8:00 PM</td>
+        </tr>
+        <tr>
+            <td>Friday</td>
+            <td>10:00 AM - 9:00 PM</td>
+        </tr>
+        <tr>
+            <td>Saturday</td>
+            <td>10:00 AM - 9:00 PM</td>
+        </tr>
+        <tr>
+            <td>Sunday</td>
+            <td>11:00 AM - 7:00 PM</td>
+        </tr>
+    </table>
 </div>
+
+<style>
+    .visiting {
+        margin-inline: 5vw;
+    }
+
+    .location {
+        text-decoration: none;
+        color: black;
+        margin-bottom: 0;
+        font-size: 0.75em;
+    }
+
+    .address {
+        margin-bottom: 0;
+    }
+
+    .number {
+        font-size: 0.75em;
+        text-decoration: none;
+        color: black;
+    }
+    .number h2 {
+            margin-top: 0.2em;
+            margin-bottom: 0;
+    }
+
+    .hours {
+        margin-top: 0.4em;
+        font-size: 1em;
+        border-spacing: 0;
+    }
+
+    .hours td{
+        padding-right: 1em;
+    }
+</style>
