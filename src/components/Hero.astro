@@ -14,9 +14,12 @@
             With decades of experience, we offer hair solutions and styling for
             any occasion, for a price that works.
         </h2>
-        <a href="/contact"><h2 class="appointment">Visit Us</h2></a>
+        <!-- <a href=".Careers"><h2 class="appointment">Visit Us</h2></a> -->
+         <h2 class="visit-button">Visit Us</h2>
+        
     </div>
 </div>
+
 <style>
     .hero {
         display: flex;
@@ -55,7 +58,7 @@
         font-size: 1.2rem;
         margin-inline: 5vw;
     }
-    .appointment {
+    .visit-button {
         border-style: solid;
         border-width: thin;
         border-radius: 0.5em;
@@ -69,3 +72,12 @@
         color: black;
     }
 </style>
+
+<script>
+  document.querySelector('.visit-button')?.addEventListener('click', () => {
+    document.getElementById('careers')?.scrollIntoView({ 
+      behavior: 'smooth',
+      block: 'start'
+    });
+  });
+</script>
