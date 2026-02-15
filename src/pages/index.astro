@@ -1,85 +1,15 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Hero from "../components/Hero.astro";
+import Products from "../components/Products.astro"
+import Careers from "../components/Careers.astro"
 const pageTitle = "Koo's Wigs";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
     <Hero />
-    <div class="products">
-        <div class="solutions">
-            <h1>Solutions</h1>
-            <h2>
-                We do everything to make you look and feel your best. We offer
-                everything from 100% human hair and lace front to products for
-                men and children. Anything to match the occasion and pricepoint!
-            </h2>
-        </div>
-
-        <div class="stylings">
-            <h1>Styling</h1>
-            <h2>
-                Our cosmological professionals do your hair your way. Our
-                services include:
-            </h2>
-            <div class="service-list">
-                <ul>
-                    <li>Cuts</li>
-                    <li>Braids</li>
-                    <li>Rows</li>
-                </ul>
-                <ul>
-                    <li>Perms</li>
-                    <li>Nails</li>
-                    <li>And More...</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <div class="careers">
-        <h1>Careers</h1>
-        <h2>
-            We have chairs and rooms open! <br />For career inquiries:<br/>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeCyMFV7T5Al6lTd_GOJb8OkeHV2jk7zuO22v3I9bNLyvVQpg/viewform?usp=dialog" target="_blank">
-                <h3 class="career-form">Click here</h3>
-            </a>
-        </h2>
-    </div>
+    <Products />
+    <Careers />
 
 
 </BaseLayout>
-<style>
-    .products {
-        margin-inline: 5vw;
-    }
-
-    .careers {
-        margin-inline: 5vw;
-    }
-    .stylings h2 {
-        margin-bottom: 0;
-    }
-    .service-list {
-        display: flex;
-        flex-direction: row;
-        justify-content: left;
-        margin: 0;
-        font-size: 1.4em;
-    }
-
-    a {
-        text-decoration: none;
-        color: black;
-    }
-
-    .career-form {
-        display: inline-block;
-        border-style: solid;
-        border-width: thin;
-        border-radius: 0.5em;
-        padding: 0.3em;
-        margin: 0;
-        box-shadow: inset;
-    }
-</style>
