@@ -1,6 +1,9 @@
 ---
 const address = "westfield wheaton maryland";
 const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
+
+import AddressIcon from "../icons/AddressIcon.astro";
+import PhoneIcon from "../icons/PhoneIcon.astro";
 ---
 
 <div class="visiting" id="visiting">
@@ -12,7 +15,7 @@ const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComp
 
     <div class="location">
         <h2 class="address">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="1em" height="1em" aria-hidden="true" style="vertical-align: middle; margin-right: 0.25em;"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <AddressIcon />
             11160 Veirs Mill Rd<br />
             Wheaton, MD 20902
         </h2>
@@ -21,7 +24,7 @@ const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComp
         </a>
     </div>
 
-    <a class="number" href="tel:3019334522"><h2><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="1em" height="1em" aria-hidden="true" style="vertical-align: middle; margin-right: 0.25em;"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.61 21 3 13.39 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.25 1.01l-2.2 2.2z"/></svg>(301) 933-4522</h2></a>
+    <a class="number" href="tel:3019334522"><h2><PhoneIcon />(301) 933-4522</h2></a>
 
     <table class="hours">
         <tr>
