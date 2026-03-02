@@ -21,3 +21,6 @@ This is a static Astro site for Koo's Wigs & Design, a hair salon in Wheaton, MD
 **Multi-page layout:** `index.astro` composes the homepage from section components (`Hero`, `Visiting`, `Products`, `Careers`). Additional pages (`about`, `faq`, `contact`) exist but use `BaseLayout` directly.
 
 **Business info:** Address, phone number `(301) 933-4522`, and hours live in both `Footer.astro` and `Visiting.astro`. Keep these in sync if they change.
+
+**Color Palette**
+This is the color palette for the website. Ink Black #0d1b2a. Prussian Blue #1b263b. Dusk Blue #415a77. Lavender Grey #778da9. Alabaster Grey #e0e1dd.
