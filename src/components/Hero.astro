@@ -1,81 +1,232 @@
 ---
-
 ---
 
-<div class="hero">
-    <div class="text">
-        <h1 class="motto">Wigs & Design. <br /> Beautiful & Quality.</h1>
-        <img
-            src="./hero_photo.jpg"
-            class="hero_photo"
-            alt="girl getting hair styled"
-        />
-        <h2 class="description">
-            With decades of experience, we offer hair solutions and styling for
-            any occasion, for a price that works.
-        </h2>
-        <!-- <a href=".Careers"><h2 class="appointment">Visit Us</h2></a> -->
-         <h2 class="visit-button">Visit Us</h2>
-        
+<section class="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-bg" style="background-image: url('https://placehold.co/1600x900/2a2a2a/2a2a2a?text=+')"></div>
+
+  <div class="hero-content">
+    <p class="hero-eyebrow">Wheaton, MD</p>
+    <h1 class="hero-title">
+      <span class="hero-title-main">Koo's Wigs</span>
+      <span class="hero-title-amp">&</span>
+      <span class="hero-title-main">Design</span>
+    </h1>
+    <p class="hero-subtitle">Wigs &nbsp;&bull;&nbsp; Hair &nbsp;&bull;&nbsp; Styling</p>
+    <p class="hero-description">
+      With decades of experience, we offer hair solutions and styling<br />
+      for any occasion, at a price that works.
+    </p>
+    <div class="hero-actions">
+      <button class="hero-btn-primary visit-button">Visit Us</button>
+      <a href="/about" class="hero-btn-secondary">Our Story</a>
     </div>
-</div>
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </div>
+
+</section>
 
 <style>
-    .hero {
-        display: flex;
-        place-items: flex-start;
+  .hero {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #0D1B2A;
+  }
 
-        padding: 0;
-        margin: 0;
-        width: 100%;
-        height: 93vh;
-
-        background-color: #e8e2dd;
-
-        /* background-image: url("../assets/logo_background.jpeg");
-    background-attachment: fixed;
-    background-position: center;
+  .hero-bg {
+    position: absolute;
+    inset: 0;
     background-size: cover;
-    background-repeat: no-repeat; */
-    }
-    .hero .text {
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.25;
+    transform: scale(1.04);
+    animation: slowzoom 18s ease-in-out infinite alternate;
+  }
 
-    .motto {
-        font-size: 2rem;
-        margin-top: 8vh;
-    }
-    .hero_photo {
-        height: 50vh;
-    }
+  @keyframes slowzoom {
+    from { transform: scale(1.04); }
+    to   { transform: scale(1.10); }
+  }
 
-    .description {
-        font-size: 1.2rem;
-        margin-inline: 5vw;
-    }
-    .visit-button {
-        border-style: solid;
-        border-width: thin;
-        border-radius: 0.5em;
-        padding: 0.3em;
-        margin: 0;
-        box-shadow: inset;
-    }
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center, rgba(65,90,119,0.08) 0%, rgba(13,27,42,0.7) 70%);
+    z-index: 1;
+  }
 
-    a {
-        text-decoration: none;
-        color: black;
-    }
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 900px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    animation: fadeUp 1.2s ease both;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-eyebrow {
+    font-family: var(--font-sans);
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--color-teal-light);
+    margin: 0 0 1.5rem;
+    animation: fadeUp 1.2s ease 0.1s both;
+  }
+
+  .hero-title {
+    font-family: var(--font-serif);
+    font-weight: 300;
+    font-size: clamp(4rem, 10vw, 9rem);
+    line-height: 0.95;
+    color: #E0E1DD;
+    letter-spacing: -0.01em;
+    margin: 0 0 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.1em;
+    animation: fadeUp 1.2s ease 0.2s both;
+  }
+
+  .hero-title-main {
+    display: block;
+  }
+
+  .hero-title-amp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-style: italic;
+    font-size: 0.55em;
+    color: var(--color-teal-light);
+    letter-spacing: 0.05em;
+    line-height: 1.2;
+  }
+
+
+  .hero-subtitle {
+    font-family: var(--font-sans);
+    font-size: 0.72rem;
+    font-weight: 400;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: #778DA9;
+    margin: 2rem 0 1.5rem;
+    animation: fadeUp 1.2s ease 0.3s both;
+  }
+
+  .hero-description {
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    font-weight: 300;
+    line-height: 1.8;
+    color: #778DA9;
+    margin: 0 0 2.5rem;
+    animation: fadeUp 1.2s ease 0.4s both;
+  }
+
+  .hero-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    animation: fadeUp 1.2s ease 0.5s both;
+  }
+
+  .hero-btn-primary {
+    background-color: var(--color-teal);
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 0.85rem 2.2rem;
+    font-family: var(--font-sans);
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.25s ease;
+  }
+
+  .hero-btn-primary:hover {
+    background-color: var(--color-teal-light);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(65,90,119,0.4);
+  }
+
+  .hero-btn-secondary {
+    color: #c8c8c8;
+    border: 1.5px solid rgba(119,141,169,0.5);
+    border-radius: 50px;
+    padding: 0.85rem 2.2rem;
+    font-family: var(--font-sans);
+    font-size: 0.72rem;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    transition: all 0.25s ease;
+    background: transparent;
+  }
+
+  .hero-btn-secondary:hover {
+    border-color: var(--color-teal-light);
+    color: var(--color-teal-light);
+    transform: translateY(-2px);
+  }
+
+  .hero-scroll-hint {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 2.5rem;
+    animation: fadeUp 1.2s ease 0.8s both;
+  }
+
+  .hero-scroll-hint span {
+    font-family: var(--font-sans);
+    font-size: 0.6rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: #415A77;
+  }
+
+  .scroll-line {
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(to bottom, #415A77, transparent);
+    animation: scrollpulse 2s ease infinite;
+  }
+
+  @keyframes scrollpulse {
+    0%, 100% { opacity: 0.3; }
+    50%       { opacity: 1; }
+  }
 </style>
 
 <script>
   document.querySelector('.visit-button')?.addEventListener('click', () => {
-    document.getElementById('visiting')?.scrollIntoView({ 
+    document.getElementById('visiting')?.scrollIntoView({
       behavior: 'smooth',
       block: 'start'
     });

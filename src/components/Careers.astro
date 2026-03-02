@@ -1,32 +1,147 @@
-<div class="careers">
-    <h1>Careers</h1>
-    <h2>
-        We have chairs and rooms open! <br />For career inquiries:<br />
-        <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSeCyMFV7T5Al6lTd_GOJb8OkeHV2jk7zuO22v3I9bNLyvVQpg/viewform?usp=dialog"
-            target="_blank"
-        >
-            <h3 class="career-form">Click here</h3>
-        </a>
-    </h2>
-</div>
+---
+---
+
+<section class="careers">
+  <div class="careers-inner">
+
+    <div class="careers-text">
+      <p class="label-text">Join Our Team</p>
+      <h2 class="careers-heading serif-display">
+        Grow Your Career<br />
+        <em>With Us.</em>
+      </h2>
+      <p class="careers-desc">
+        We have chairs and rooms open for talented stylists and beauty professionals.
+        If you're passionate about your craft and ready to be part of an exceptional team,
+        we'd love to hear from you.
+      </p>
+      <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLSeCyMFV7T5Al6lTd_GOJb8OkeHV2jk7zuO22v3I9bNLyvVQpg/viewform?usp=dialog"
+        target="_blank"
+        class="careers-btn"
+      >
+        Apply Now
+      </a>
+    </div>
+
+    <div class="careers-image-col">
+      <div class="careers-image-frame">
+        <img
+          src="https://placehold.co/580x440/363636/c8dede?text=Join+Our+Team"
+          alt="Careers at Koo's Wigs & Design"
+          class="careers-img"
+        />
+      </div>
+      <div class="careers-accent"></div>
+    </div>
+
+  </div>
+</section>
 
 <style>
-    .careers {
-        margin-inline: 5vw;
-    }
-    a {
-        text-decoration: none;
-        color: black;
-    }
+  .careers {
+    background-color: var(--color-warm);
+    padding: 7rem 0;
+    overflow: hidden;
+  }
 
-    .career-form {
-        display: inline-block;
-        border-style: solid;
-        border-width: thin;
-        border-radius: 0.5em;
-        padding: 0.3em;
-        margin: 0;
-        box-shadow: inset;
+  .careers-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+  }
+
+  .careers-text {
+    padding-right: 1rem;
+  }
+
+  .careers-heading {
+    font-family: var(--font-serif);
+    font-size: clamp(2.5rem, 4.5vw, 4rem);
+    font-weight: 300;
+    color: var(--color-navy);
+    line-height: 1.1;
+    margin: 0.6rem 0 1.5rem;
+    letter-spacing: -0.01em;
+  }
+
+  .careers-heading em {
+    font-style: italic;
+    color: var(--color-teal);
+  }
+
+  .careers-desc {
+    font-family: var(--font-sans);
+    font-size: 0.88rem;
+    font-weight: 300;
+    line-height: 1.85;
+    color: var(--color-text-muted);
+    margin: 0 0 2.5rem;
+    max-width: 400px;
+  }
+
+  .careers-btn {
+    display: inline-block;
+    background-color: var(--color-navy);
+    color: #fff;
+    border-radius: 50px;
+    padding: 0.9rem 2.4rem;
+    font-family: var(--font-sans);
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    transition: all 0.25s ease;
+  }
+
+  .careers-btn:hover {
+    background-color: var(--color-teal);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(65,90,119,0.3);
+  }
+
+  .careers-image-col {
+    position: relative;
+    padding-bottom: 2rem;
+    padding-right: 2rem;
+  }
+
+  .careers-image-frame {
+    position: relative;
+    z-index: 1;
+  }
+
+  .careers-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+  }
+
+  .careers-accent {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 55%;
+    height: 70%;
+    background-color: var(--color-teal-muted);
+    z-index: 0;
+  }
+
+  @media (max-width: 900px) {
+    .careers-inner {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      padding: 0 2rem;
     }
+    .careers-image-col {
+      max-width: 480px;
+      margin: 0 auto;
+    }
+  }
 </style>

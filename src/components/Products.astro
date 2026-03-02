@@ -1,49 +1,273 @@
-<div class="products">
-    <div class="solutions">
-        <h1>Solutions</h1>
-        <h2>
-            We do everything to make you look and feel your best. We offer
-            everything from 100% human hair and lace front to products for men
-            and children. Anything to match the occasion and pricepoint!
-        </h2>
+---
+---
+
+<!-- "What's New" section -->
+<section class="whats-new">
+  <div class="whats-new-inner">
+    <h2 class="whats-new-heading serif-display">What's New at Koo's?</h2>
+
+    <div class="news-grid">
+      <div class="news-card">
+        <div class="news-card-img" style="background-image: url('https://placehold.co/400x400/4a7c7c/c8dede?text=News')">
+          <div class="news-card-overlay">
+            <p class="news-card-date">Add Date</p>
+            <p class="news-card-title">[Add news item title here]</p>
+          </div>
+        </div>
+      </div>
+      <div class="news-card">
+        <div class="news-card-img" style="background-image: url('https://placehold.co/400x400/3a5f5f/c8dede?text=Update')">
+          <div class="news-card-overlay">
+            <p class="news-card-date">Add Date</p>
+            <p class="news-card-title">[Add news item title here]</p>
+          </div>
+        </div>
+      </div>
+      <div class="news-card">
+        <div class="news-card-img" style="background-image: url('https://placehold.co/400x400/2a4a4a/c8dede?text=Promo')">
+          <div class="news-card-overlay">
+            <p class="news-card-date">Add Date</p>
+            <p class="news-card-title">[Add news item title here]</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services section -->
+<section class="services">
+  <div class="services-inner">
+    <div class="services-header">
+      <p class="label-text">How Can We</p>
+      <h2 class="services-heading serif-display">Enhance Your Natural Beauty?</h2>
+      <p class="services-subtext">
+        From wigs and extensions to full styling services — we have everything you need to look and feel your absolute best.
+      </p>
     </div>
 
-    <div class="stylings">
-        <h1>Styling</h1>
-        <h2>
-            Our hairstyle professionals do your hair your way. Our services
-            include:
-        </h2>
-        <div class="service-list">
-            <ul>
-                <li>Cuts</li>
-                <li>Braids</li>
-                <li>Rows</li>
-            </ul>
-            <ul>
-                <li>Perms</li>
-                <li>And More...</li>
-            </ul>
+    <div class="services-grid">
+
+      <div class="service-card">
+        <div class="service-card-img" style="background-image: url('https://placehold.co/500x380/e8e2dd/4a7c7c?text=Wigs')"></div>
+        <div class="service-card-body">
+          <p class="label-text">Wigs & Extensions</p>
+          <h3 class="service-card-title serif-display">Hair Solutions</h3>
+          <p class="service-card-desc">
+            100% human hair, lace front, and specialty wigs — for women, men, and children. Every occasion, every price point.
+          </p>
         </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-card-img" style="background-image: url('https://placehold.co/500x380/d8d0c8/4a7c7c?text=Styling')"></div>
+        <div class="service-card-body">
+          <p class="label-text">Professional Styling</p>
+          <h3 class="service-card-title serif-display">Hair Styling</h3>
+          <p class="service-card-desc">
+            Our stylists do your hair your way. Services include cuts, braids, rows, perms, and much more.
+          </p>
+          <ul class="service-list">
+            <li>Cuts</li>
+            <li>Braids</li>
+            <li>Rows</li>
+            <li>Perms</li>
+            <li>& More</li>
+          </ul>
+        </div>
+      </div>
+
     </div>
-</div>
+  </div>
+</section>
 
 <style>
-    .products {
-        margin-inline: 5vw;
-    }
+  /* ---- What's New ---- */
+  .whats-new {
+    background-color: var(--color-teal);
+    padding: 6rem 0;
+  }
 
-    .careers {
-        margin-inline: 5vw;
+  .whats-new-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 4rem;
+  }
+
+  .whats-new-heading {
+    font-family: var(--font-serif);
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 300;
+    color: #fff;
+    margin: 0 0 3rem;
+    letter-spacing: -0.01em;
+  }
+
+  .news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .news-card {
+    cursor: pointer;
+    overflow: hidden;
+  }
+
+  .news-card-img {
+    position: relative;
+    aspect-ratio: 1;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.4s ease;
+  }
+
+  .news-card:hover .news-card-img {
+    transform: scale(1.03);
+  }
+
+  .news-card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.75) 40%, transparent 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1.25rem;
+  }
+
+  .news-card-date {
+    font-family: var(--font-sans);
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(119,141,169,0.85);
+    margin: 0 0 0.4rem;
+  }
+
+  .news-card-title {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #fff;
+    margin: 0;
+    line-height: 1.4;
+  }
+
+  /* ---- Services ---- */
+  .services {
+    background-color: var(--color-white);
+    padding: 7rem 0;
+  }
+
+  .services-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 4rem;
+  }
+
+  .services-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .services-heading {
+    font-family: var(--font-serif);
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
+    font-weight: 400;
+    color: var(--color-text);
+    margin: 0.5rem 0 1rem;
+    letter-spacing: -0.01em;
+  }
+
+  .services-subtext {
+    font-family: var(--font-sans);
+    font-size: 0.88rem;
+    font-weight: 300;
+    line-height: 1.8;
+    color: var(--color-text-muted);
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+
+  .service-card {
+    background-color: var(--color-warm);
+    overflow: hidden;
+  }
+
+  .service-card-img {
+    height: 260px;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s ease;
+  }
+
+  .service-card:hover .service-card-img {
+    transform: scale(1.03);
+  }
+
+  .service-card-body {
+    padding: 2rem;
+  }
+
+  .service-card-title {
+    font-family: var(--font-serif);
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: var(--color-text);
+    margin: 0.5rem 0 0.75rem;
+  }
+
+  .service-card-desc {
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    font-weight: 300;
+    line-height: 1.75;
+    color: var(--color-text-muted);
+    margin: 0 0 1rem;
+  }
+
+  .service-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+  }
+
+  .service-list li {
+    font-family: var(--font-sans);
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-teal);
+  }
+
+  .service-list li::before {
+    content: "— ";
+    color: var(--color-teal-muted);
+  }
+
+  @media (max-width: 900px) {
+    .news-grid {
+      grid-template-columns: 1fr;
+      max-width: 400px;
     }
-    .stylings h2 {
-        margin-bottom: 0;
+    .services-grid {
+      grid-template-columns: 1fr;
     }
-    .service-list {
-        display: flex;
-        flex-direction: row;
-        justify-content: left;
-        margin: 0;
-        font-size: 1.4em;
+    .whats-new-inner,
+    .services-inner {
+      padding: 0 2rem;
     }
+  }
 </style>

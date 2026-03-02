@@ -3,72 +3,206 @@ const address = "westfield wheaton maryland";
 const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
 ---
 
-<footer class="Footer">
-    <div class="contact-info">
-        <address>
-            <a href={mapsUrl} class="wheaton" target="_blank">
-                11160 Veirs Mill Rd<br />
-                Wheaton, MD 20902<br />
-            </a>
-            <a class="phone-number" href="tel:3019334522">(301) 933-4522</a>
-        </address>
-        <div class="hours">
-            Mon-Thur 10AM-8PM<br />
-            Fri-Sat 10AM-9PM<br />
-            Sunday 10AM-7PM<br />
-        </div>
+<footer class="footer">
+  <div class="footer-inner">
+
+    <div class="footer-brand">
+      <img src="/koo_salon.svg" alt="Koo's Wigs & Design" class="footer-logo" />
+      <p class="footer-tagline">Beautiful & Quality.</p>
+      <p class="footer-tagline-sub">Wheaton, MD</p>
     </div>
 
-    <div class="copyright">
-        &copy; 2026 Koo's Wigs & Design. All Rights Reserved.
+    <div class="footer-col">
+      <p class="footer-col-title">Visit Us</p>
+      <a href={mapsUrl} target="_blank" class="footer-link">
+        11160 Veirs Mill Rd<br />
+        Wheaton, MD 20902
+      </a>
+      <p class="footer-note">Inside Wheaton Mall<br />Ground floor, next to Target</p>
     </div>
+
+    <div class="footer-col">
+      <p class="footer-col-title">Contact</p>
+      <a href="tel:3019334522" class="footer-link">(301) 933-4522</a>
+    </div>
+
+    <div class="footer-col">
+      <p class="footer-col-title">Hours</p>
+      <table class="footer-hours">
+        <tr><td>Mon – Thu</td><td>10AM – 8PM</td></tr>
+        <tr><td>Fri – Sat</td><td>10AM – 9PM</td></tr>
+        <tr><td>Sun</td><td>11AM – 7PM</td></tr>
+      </table>
+    </div>
+
+    <div class="footer-col">
+      <p class="footer-col-title">Navigate</p>
+      <nav class="footer-nav">
+        <a href="/" class="footer-nav-link">Home</a>
+        <a href="/about" class="footer-nav-link">About</a>
+        <a href="/faq" class="footer-nav-link">FAQ</a>
+        <a href="/contact" class="footer-nav-link">Contact</a>
+      </nav>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2026 Koo's Wigs &amp; Design. All Rights Reserved.</p>
+  </div>
 </footer>
+
 <style>
-    .Footer {
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
-        align-items: center;
-        background-color: #363636;
-        height: 15vh;
+  .footer {
+    background-color: var(--color-navy);
+    color: #778DA9;
+  }
 
-        position: relative;
-        bottom: 0;
-        left: 0;
-        width: 100%;
+  .footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5rem 4rem 3rem;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
 
-        color: white;
-    }
-    nav {
-        display: flex;
-        justify-content: space-between;
-        width: 90%;
-        margin-bottom: 1vh;
-    }
-    a {
-        font-size: 1.5em;
-        color: white;
-        text-decoration: none;
-    }
-    .contact-info {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+  .footer-brand {}
 
-        width: 90%;
-        margin-top: 1vh;
-    }
-    address {
-        font-size: 1em;
-    }
-    .wheaton {
-        font-size: 1em;
-    }
-    .phone-number {
-        font-size: 1em;
-    }
+  .footer-logo {
+    height: 48px;
+    width: auto;
+    filter: brightness(0) invert(1);
+    opacity: 0.85;
+    display: block;
+    margin-bottom: 1rem;
+  }
 
-    .copyright{
-        font-size: .7em;
+  .footer-tagline {
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    font-weight: 300;
+    font-style: italic;
+    color: #E0E1DD;
+    margin: 0 0 0.25rem;
+  }
+
+  .footer-tagline-sub {
+    font-family: var(--font-sans);
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--color-teal-light);
+    margin: 0;
+  }
+
+  .footer-col-title {
+    font-family: var(--font-sans);
+    font-size: 0.62rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #E0E1DD;
+    margin: 0 0 1.2rem;
+  }
+
+  .footer-link {
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    font-weight: 300;
+    line-height: 1.7;
+    color: #778DA9;
+    display: block;
+    margin-bottom: 0.5rem;
+    transition: color 0.2s;
+  }
+
+  .footer-link:hover {
+    color: var(--color-teal-light);
+  }
+
+  .footer-note {
+    font-family: var(--font-sans);
+    font-size: 0.72rem;
+    font-weight: 300;
+    line-height: 1.6;
+    color: #415A77;
+    font-style: italic;
+    margin: 0;
+  }
+
+  .footer-hours {
+    border-spacing: 0;
+    border-collapse: collapse;
+  }
+
+  .footer-hours td {
+    font-family: var(--font-sans);
+    font-size: 0.78rem;
+    font-weight: 300;
+    color: #778DA9;
+    padding: 0.2rem 1rem 0.2rem 0;
+    line-height: 1.6;
+  }
+
+  .footer-hours tr td:first-child {
+    color: #415A77;
+    white-space: nowrap;
+  }
+
+  .footer-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .footer-nav-link {
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    font-weight: 300;
+    color: #778DA9;
+    transition: color 0.2s;
+  }
+
+  .footer-nav-link:hover {
+    color: var(--color-teal-light);
+  }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.07);
+    padding: 1.5rem 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .footer-bottom p {
+    font-family: var(--font-sans);
+    font-size: 0.65rem;
+    font-weight: 300;
+    letter-spacing: 0.08em;
+    color: #415A77;
+    margin: 0;
+    text-align: center;
+  }
+
+  @media (max-width: 1024px) {
+    .footer-inner {
+      grid-template-columns: 1fr 1fr 1fr;
+      padding: 4rem 2rem 2rem;
     }
+    .footer-bottom {
+      padding: 1.5rem 2rem;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .footer-inner {
+      grid-template-columns: 1fr 1fr;
+    }
+    .footer-brand {
+      grid-column: 1 / -1;
+    }
+  }
 </style>
