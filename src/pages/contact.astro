@@ -3,5 +3,13 @@ import BaseLayout from '../layouts/BaseLayout.astro'
 const pageTitle = "Contact"
 ---
 <BaseLayout pageTitle={pageTitle}>
-  <h1>contact</h1>
+  <iframe
+  width="600"
+  height="450"
+  style="border:0"
+  loading="lazy"
+  allowfullscreen
+  referrerpolicy="no-referrer-when-downgrade"
+  src="https://www.google.com/maps/embed/v1/place?key=${MAPS_EMBED_KEY}&q=wheaton+mall+maryland">
+</iframe>
 </BaseLayout>
