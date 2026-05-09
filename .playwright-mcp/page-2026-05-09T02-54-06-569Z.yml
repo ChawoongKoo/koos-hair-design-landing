@@ -1,0 +1,149 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]: NOW HIRING FULL-TIME & PART-TIME STYLISTS ★ VISIT OUR CAREERS PAGE FOR DETAILS AND TO APPLY ★ NOW HIRING FULL-TIME & PART-TIME STYLISTS ★ VISIT OUR CAREERS PAGE FOR DETAILS AND TO APPLY ★ WE HAVE ROOMS FOR RENT ★
+  - banner [ref=e4]:
+    - img "Koo's Wigs & Design logo" [ref=e6] [cursor=pointer]
+    - navigation [ref=e7]:
+      - generic [ref=e8] [cursor=pointer]: Home
+      - generic [ref=e9] [cursor=pointer]: Contact
+  - generic [ref=e13]:
+    - paragraph [ref=e14]: Wheaton, MD
+    - heading "Koo's Wigs & Design" [level=1] [ref=e15]:
+      - generic [ref=e16]: Koo's Wigs
+      - generic [ref=e17]: "&"
+      - generic [ref=e18]: Design
+    - paragraph [ref=e19]: Wigs • Hair • Styling
+    - paragraph [ref=e20]:
+      - text: With more than 15 years of experience, we offer hair solutions and styling
+      - text: for any occasion, at a price that works.
+    - button "Visit Us" [ref=e22] [cursor=pointer]
+    - generic [ref=e24]: Scroll
+  - generic [ref=e27]:
+    - img "Koo's Wigs & Design salon interior" [ref=e31]
+    - generic [ref=e32]:
+      - paragraph [ref=e33]: Come Find Us
+      - heading "The Place to be your best." [level=2] [ref=e34]:
+        - generic [ref=e35]: The Place
+        - generic [ref=e36]: to be your best.
+      - paragraph [ref=e37]: We're located inside Wheaton Mall — find us on the ground floor, right next to Target.
+      - generic [ref=e38]:
+        - generic [ref=e39]:
+          - img [ref=e41]
+          - generic [ref=e43]:
+            - link "11160 Veirs Mill Rd Wheaton, MD 20902" [ref=e44] [cursor=pointer]:
+              - /url: https://www.google.com/maps/search/?api=1&query=westfield%20wheaton%20maryland
+              - text: 11160 Veirs Mill Rd
+              - text: Wheaton, MD 20902
+            - link "View on Google Maps ↗" [ref=e45] [cursor=pointer]:
+              - /url: https://www.google.com/maps/search/?api=1&query=westfield%20wheaton%20maryland
+        - generic [ref=e46]:
+          - img [ref=e48]
+          - link "(301) 933-4522" [ref=e50] [cursor=pointer]:
+            - /url: tel:3019334522
+      - generic [ref=e51]:
+        - paragraph [ref=e52]: Hours
+        - table [ref=e53]:
+          - rowgroup [ref=e54]:
+            - row "Monday – Thursday 10:00 AM – 8:00 PM" [ref=e55]:
+              - cell "Monday – Thursday" [ref=e56]
+              - cell "10:00 AM – 8:00 PM" [ref=e57]
+            - row "Friday – Saturday 10:00 AM – 9:00 PM" [ref=e58]:
+              - cell "Friday – Saturday" [ref=e59]
+              - cell "10:00 AM – 9:00 PM" [ref=e60]
+            - row "Sunday 11:00 AM – 7:00 PM" [ref=e61]:
+              - cell "Sunday" [ref=e62]
+              - cell "11:00 AM – 7:00 PM" [ref=e63]
+  - generic [ref=e65]:
+    - heading "What's New at Koo's?" [level=2] [ref=e66]
+    - generic [ref=e67]:
+      - generic [ref=e70] [cursor=pointer]:
+        - paragraph [ref=e71]: 12/16/2025
+        - paragraph [ref=e72]: We have a Nail Salon space open for rent!
+      - generic [ref=e75] [cursor=pointer]:
+        - paragraph [ref=e76]: 11/04/2025
+        - paragraph [ref=e77]: We now offer Massage Services!
+      - generic [ref=e80] [cursor=pointer]:
+        - paragraph [ref=e81]: 09/20/2025
+        - paragraph [ref=e82]: We have a Private Back Room open for rent!
+  - generic [ref=e84]:
+    - generic [ref=e85]:
+      - paragraph [ref=e86]: How Can We
+      - heading "Enhance Your Natural Beauty?" [level=2] [ref=e87]
+      - paragraph [ref=e88]: From wigs and extensions to full styling services — we have everything you need to look and feel your absolute best.
+    - generic [ref=e89]:
+      - generic [ref=e92]:
+        - paragraph [ref=e93]: Wigs & Extensions
+        - heading "Hair Solutions" [level=3] [ref=e94]
+        - paragraph [ref=e95]: 100% human hair, lace front, and specialty wigs — for women, men, and children. Every occasion, every price point.
+      - generic [ref=e98]:
+        - paragraph [ref=e99]: Professional Styling
+        - heading "Hair Styling" [level=3] [ref=e100]
+        - paragraph [ref=e101]: Our stylists do your hair your way. Services include cuts, braids, rows, perms, and much more.
+        - list [ref=e102]:
+          - listitem [ref=e103]: — Cuts
+          - listitem [ref=e104]: — Braids
+          - listitem [ref=e105]: — Rows
+          - listitem [ref=e106]: — Perms
+          - listitem [ref=e107]: — & More
+  - generic [ref=e109]:
+    - generic [ref=e110]:
+      - paragraph [ref=e111]: Join Our Team
+      - heading "Grow Your Career With Us." [level=2] [ref=e112]:
+        - text: Grow Your Career
+        - emphasis [ref=e113]: With Us.
+      - paragraph [ref=e114]: We have chairs and rooms open for talented stylists and beauty professionals. If you're passionate about your craft and ready to be part of an exceptional team, we'd love to hear from you.
+      - link "Apply Now" [ref=e115] [cursor=pointer]:
+        - /url: https://docs.google.com/forms/d/e/1FAIpQLSeCyMFV7T5Al6lTd_GOJb8OkeHV2jk7zuO22v3I9bNLyvVQpg/viewform?usp=dialog
+    - img "Careers at Koo's Wigs & Design" [ref=e118]
+  - contentinfo [ref=e120]:
+    - generic [ref=e121]:
+      - generic [ref=e122]:
+        - img "Koo's Wigs & Design" [ref=e123]
+        - paragraph [ref=e124]: Beautiful & Quality.
+        - paragraph [ref=e125]: Wheaton, MD
+      - generic [ref=e126]:
+        - paragraph [ref=e127]: Visit Us
+        - link "11160 Veirs Mill Rd Wheaton, MD 20902" [ref=e128] [cursor=pointer]:
+          - /url: https://www.google.com/maps/search/?api=1&query=westfield%20wheaton%20maryland
+          - text: 11160 Veirs Mill Rd
+          - text: Wheaton, MD 20902
+        - paragraph [ref=e129]:
+          - text: Inside Wheaton Mall
+          - text: Ground floor, next to Target
+      - generic [ref=e130]:
+        - paragraph [ref=e131]: Contact
+        - link "(301) 933-4522" [ref=e132] [cursor=pointer]:
+          - /url: tel:3019334522
+      - generic [ref=e133]:
+        - paragraph [ref=e134]: Hours
+        - table [ref=e135]:
+          - rowgroup [ref=e136]:
+            - row "Mon – Thu 10AM – 8PM" [ref=e137]:
+              - cell "Mon – Thu" [ref=e138]
+              - cell "10AM – 8PM" [ref=e139]
+            - row "Fri – Sat 10AM – 9PM" [ref=e140]:
+              - cell "Fri – Sat" [ref=e141]
+              - cell "10AM – 9PM" [ref=e142]
+            - row "Sun 11AM – 7PM" [ref=e143]:
+              - cell "Sun" [ref=e144]
+              - cell "11AM – 7PM" [ref=e145]
+      - generic [ref=e146]:
+        - paragraph [ref=e147]: Navigate
+        - navigation [ref=e148]:
+          - button "Home" [ref=e149] [cursor=pointer]
+          - button "Contact" [ref=e150] [cursor=pointer]
+    - paragraph [ref=e152]: © 2026 Koo's Wigs & Design. All Rights Reserved.
+  - generic [ref=e155]:
+    - button "Menu" [ref=e156]:
+      - img [ref=e158]
+      - generic: Menu
+    - button "Inspect" [ref=e162]:
+      - img [ref=e164]
+      - generic: Inspect
+    - button "Audit" [ref=e166]:
+      - generic [ref=e167]:
+        - img [ref=e168]
+        - img [ref=e171]
+      - generic: Audit
+    - button "Settings" [ref=e174]:
+      - img [ref=e176]
+      - generic: Settings
