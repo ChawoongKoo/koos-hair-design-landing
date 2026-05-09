@@ -24,3 +24,7 @@ This is a static Astro site for Koo's Wigs & Design, a hair salon in Wheaton, MD
 
 **Color Palette**
 This is the color palette for the website. Ink Black #0d1b2a. Prussian Blue #1b263b. Dusk Blue #415a77. Lavender Grey #778da9. Alabaster Grey #e0e1dd.
+Source: https://coolors.co/0d1b2a-1b263b-415a77-778da9-e0e1dd
+
+**Screenshots**
+Always save and read Playwright MCP screenshots from the `.claude_sc/` directory in the project root.
