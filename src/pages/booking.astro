@@ -1,7 +1,687 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
-const pageTitle = "About"
+const pageTitle = "Book an Appointment | Koo's Wigs & Design"
 ---
 <BaseLayout pageTitle={pageTitle}>
-    <h1>about</h1>
+
+<div class="booking-shell">
+
+  <!-- ═══ LEFT PANEL ═══ -->
+  <aside class="panel-left">
+    <div class="panel-left-inner">
+
+      <div class="panel-top">
+        <p class="panel-eyebrow">Koo's Wigs & Design</p>
+        <h1 class="panel-title">Book an<br /><em>Appointment</em></h1>
+        <div class="panel-rule"></div>
+        <p class="panel-sub">
+          Reserve your visit online. We confirm within 24 hours — or call us directly to book same-day.
+        </p>
+      </div>
+
+      <div class="panel-info">
+        <div class="info-block">
+          <p class="info-label">Location</p>
+          <p class="info-val">Wheaton Mall<br />11160 Veirs Mill Rd<br />Wheaton, MD 20902</p>
+        </div>
+        <div class="info-block">
+          <p class="info-label">Hours</p>
+          <p class="info-val">
+            Mon – Thu &nbsp; 10 AM – 8 PM<br />
+            Fri – Sat &nbsp;&nbsp;&nbsp; 10 AM – 9 PM<br />
+            Sun &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 11 AM – 7 PM
+          </p>
+        </div>
+        <div class="info-block">
+          <p class="info-label">Phone</p>
+          <a href="tel:3019334522" class="info-phone">(301) 933-4522</a>
+        </div>
+      </div>
+
+      <div class="panel-deco">
+        <span class="deco-num">01</span>
+        <span class="deco-num">02</span>
+        <span class="deco-num">03</span>
+      </div>
+
+    </div>
+  </aside>
+
+  <!-- ═══ RIGHT PANEL ═══ -->
+  <main class="panel-right">
+    <form class="booking-form" id="booking-form" novalidate method="POST" action="/api/booking">
+
+      <!-- Step 1: Service -->
+      <div class="step">
+        <div class="step-header">
+          <span class="step-num">01</span>
+          <div>
+            <p class="step-label">Service</p>
+            <h2 class="step-heading serif-display">What can we do for you?</h2>
+          </div>
+        </div>
+
+        <div class="service-grid">
+          <label class="svc-card">
+            <input type="radio" name="service" value="wigs" />
+            <div class="svc-inner">
+              <div class="svc-check"></div>
+              <p class="svc-title serif-display">Wigs & Extensions</p>
+              <p class="svc-desc">Fitting, styling, and consultation for wigs and hair extensions of all types.</p>
+            </div>
+          </label>
+
+          <label class="svc-card">
+            <input type="radio" name="service" value="styling" />
+            <div class="svc-inner">
+              <div class="svc-check"></div>
+              <p class="svc-title serif-display">Hair Styling</p>
+              <p class="svc-desc">Cuts, braids, rows, perms, and more with our professional stylists.</p>
+              <div class="svc-tags">
+                <span>Cuts</span><span>Braids</span><span>Rows</span><span>Perms</span>
+              </div>
+            </div>
+          </label>
+
+          <label class="svc-card">
+            <input type="radio" name="service" value="massage" />
+            <div class="svc-inner">
+              <div class="svc-check"></div>
+              <p class="svc-title serif-display">Massage Services</p>
+              <p class="svc-desc">Relaxation and therapeutic massage by our licensed massage therapists.</p>
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <!-- Step 2: Date & Time -->
+      <div class="step">
+        <div class="step-header">
+          <span class="step-num">02</span>
+          <div>
+            <p class="step-label">Date & Time</p>
+            <h2 class="step-heading serif-display">When would you like to come in?</h2>
+          </div>
+        </div>
+
+        <div class="fields-row">
+          <div class="field">
+            <label class="field-label" for="appt-date">Preferred Date</label>
+            <input class="field-input" type="date" id="appt-date" name="date" />
+          </div>
+          <div class="field">
+            <label class="field-label" for="appt-time">Preferred Time</label>
+            <div class="select-wrap">
+              <select class="field-input" id="appt-time" name="time">
+                <option value="" disabled selected>Select a time</option>
+                <optgroup label="Morning">
+                  <option value="10:00">10:00 AM</option>
+                  <option value="10:30">10:30 AM</option>
+                  <option value="11:00">11:00 AM</option>
+                  <option value="11:30">11:30 AM</option>
+                </optgroup>
+                <optgroup label="Afternoon">
+                  <option value="12:00">12:00 PM</option>
+                  <option value="12:30">12:30 PM</option>
+                  <option value="13:00">1:00 PM</option>
+                  <option value="13:30">1:30 PM</option>
+                  <option value="14:00">2:00 PM</option>
+                  <option value="14:30">2:30 PM</option>
+                  <option value="15:00">3:00 PM</option>
+                  <option value="15:30">3:30 PM</option>
+                  <option value="16:00">4:00 PM</option>
+                  <option value="16:30">4:30 PM</option>
+                </optgroup>
+                <optgroup label="Evening">
+                  <option value="17:00">5:00 PM</option>
+                  <option value="17:30">5:30 PM</option>
+                  <option value="18:00">6:00 PM</option>
+                  <option value="18:30">6:30 PM</option>
+                  <option value="19:00">7:00 PM</option>
+                  <option value="19:30">7:30 PM</option>
+                </optgroup>
+              </select>
+              <span class="select-arrow">↓</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 3: Your Info -->
+      <div class="step">
+        <div class="step-header">
+          <span class="step-num">03</span>
+          <div>
+            <p class="step-label">Your Information</p>
+            <h2 class="step-heading serif-display">How do we reach you?</h2>
+          </div>
+        </div>
+
+        <div class="fields-grid">
+          <div class="field">
+            <label class="field-label" for="first-name">First Name</label>
+            <input class="field-input" type="text" id="first-name" name="firstName" placeholder="Jane" />
+          </div>
+          <div class="field">
+            <label class="field-label" for="last-name">Last Name</label>
+            <input class="field-input" type="text" id="last-name" name="lastName" placeholder="Doe" />
+          </div>
+          <div class="field">
+            <label class="field-label" for="email">Email Address</label>
+            <input class="field-input" type="email" id="email" name="email" placeholder="jane@example.com" />
+          </div>
+          <div class="field">
+            <label class="field-label" for="phone">Phone Number</label>
+            <input class="field-input" type="tel" id="phone" name="phone" placeholder="(301) 555-0100" />
+          </div>
+        </div>
+
+        <div class="field notes-field">
+          <label class="field-label" for="notes">Additional Notes <span class="opt">(optional)</span></label>
+          <textarea class="field-input field-textarea" id="notes" name="notes"
+            placeholder="Any special requests, hair type details, or things we should know before your visit..."></textarea>
+        </div>
+      </div>
+
+      <!-- Submit -->
+      <div class="submit-block">
+        <button type="submit" class="submit-btn">
+          <span class="submit-text">Request Appointment</span>
+          <span class="submit-arrow">→</span>
+        </button>
+        <p class="submit-note">
+          No payment required to book. We'll confirm your appointment via email or phone within 24 hours.
+        </p>
+      </div>
+
+    </form>
+  </main>
+
+</div>
+
 </BaseLayout>
+
+<style>
+  /* ─── Shell Layout ──────────────────────────────────── */
+  .booking-shell {
+    display: grid;
+    grid-template-columns: 420px 1fr;
+    min-height: calc(100vh - 72px); /* subtract header height */
+  }
+
+  /* ─── Left Panel ─────────────────────────────────────── */
+  .panel-left {
+    background-color: var(--color-dark);
+    position: sticky;
+    top: 72px;
+    height: calc(100vh - 72px);
+    overflow: hidden;
+  }
+
+  .panel-left-inner {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3.5rem 3rem 3rem;
+    position: relative;
+  }
+
+  .panel-eyebrow {
+    font-family: var(--font-sans);
+    font-size: 0.62rem;
+    font-weight: 500;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--color-teal-light);
+    margin: 0 0 1.5rem;
+  }
+
+  .panel-title {
+    font-family: var(--font-serif);
+    font-size: clamp(2.8rem, 3.5vw, 4rem);
+    font-weight: 300;
+    color: #E0E1DD;
+    line-height: 1.05;
+    margin: 0 0 1.5rem;
+    letter-spacing: -0.01em;
+  }
+
+  .panel-title em {
+    font-style: italic;
+    color: var(--color-teal-light);
+  }
+
+  .panel-rule {
+    width: 48px;
+    height: 1px;
+    background-color: var(--color-teal);
+    margin-bottom: 1.5rem;
+  }
+
+  .panel-sub {
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    font-weight: 300;
+    line-height: 1.85;
+    color: #415A77;
+    margin: 0;
+    max-width: 280px;
+  }
+
+  /* Info blocks */
+  .panel-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .info-block {
+    padding-left: 1rem;
+    border-left: 1.5px solid #1B263B;
+  }
+
+  .info-label {
+    font-family: var(--font-sans);
+    font-size: 0.6rem;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--color-teal);
+    margin: 0 0 0.4rem;
+  }
+
+  .info-val {
+    font-family: var(--font-sans);
+    font-size: 0.78rem;
+    font-weight: 300;
+    line-height: 1.75;
+    color: #778DA9;
+    margin: 0;
+  }
+
+  .info-phone {
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: var(--color-teal-light);
+    transition: color 0.2s;
+  }
+
+  .info-phone:hover {
+    color: #E0E1DD;
+  }
+
+  /* Ghost numbers decoration */
+  .panel-deco {
+    position: absolute;
+    bottom: -1rem;
+    right: -0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0;
+    pointer-events: none;
+  }
+
+  .deco-num {
+    font-family: var(--font-serif);
+    font-size: 5.5rem;
+    font-weight: 300;
+    color: rgba(65, 90, 119, 0.08);
+    line-height: 1;
+    letter-spacing: -0.03em;
+  }
+
+  /* ─── Right Panel ─────────────────────────────────────── */
+  .panel-right {
+    background-color: #fafafa;
+    padding: 4rem 4.5rem 6rem;
+    overflow-y: auto;
+  }
+
+  .booking-form {
+    max-width: 620px;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  /* ─── Steps ──────────────────────────────────────────── */
+  .step {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .step-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .step-num {
+    font-family: var(--font-serif);
+    font-size: 3.5rem;
+    font-weight: 300;
+    color: #E0E1DD;
+    line-height: 1;
+    flex-shrink: 0;
+    margin-top: -0.4rem;
+  }
+
+  .step-label {
+    font-family: var(--font-sans);
+    font-size: 0.62rem;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--color-teal);
+    margin: 0 0 0.35rem;
+  }
+
+  .step-heading {
+    font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+    font-weight: 400;
+    color: var(--color-text);
+    margin: 0;
+    line-height: 1.15;
+  }
+
+  /* ─── Service Cards ──────────────────────────────────── */
+  .service-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .svc-card {
+    display: block;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .svc-card input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .svc-inner {
+    padding: 1.4rem 1.6rem;
+    border: 1.5px solid #E0E1DD;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+    position: relative;
+  }
+
+  .svc-check {
+    position: absolute;
+    top: 1.2rem;
+    right: 1.4rem;
+    width: 18px;
+    height: 18px;
+    border: 1.5px solid #E0E1DD;
+    border-radius: 50%;
+    transition: border-color 0.2s, background-color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .svc-check::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--color-teal);
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+
+  .svc-card:hover .svc-inner {
+    border-color: var(--color-teal-light);
+  }
+
+  .svc-card:has(input:checked) .svc-inner {
+    border-color: var(--color-teal);
+    background-color: #f0f2f0;
+  }
+
+  .svc-card:has(input:checked) .svc-check {
+    border-color: var(--color-teal);
+  }
+
+  .svc-card:has(input:checked) .svc-check::after {
+    opacity: 1;
+  }
+
+  .svc-title {
+    font-size: 1.35rem;
+    color: var(--color-text);
+    margin: 0 0 0.3rem;
+    padding-right: 2rem;
+  }
+
+  .svc-desc {
+    font-family: var(--font-sans);
+    font-size: 0.78rem;
+    font-weight: 300;
+    color: var(--color-text-muted);
+    line-height: 1.65;
+    margin: 0 0 0.75rem;
+  }
+
+  .svc-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 0.75rem;
+  }
+
+  .svc-tags span {
+    font-family: var(--font-sans);
+    font-size: 0.62rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-teal);
+  }
+
+  .svc-tags span::before {
+    content: "— ";
+    color: #C8CAC5;
+  }
+
+  /* ─── Fields ─────────────────────────────────────────── */
+  .fields-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .fields-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem 2rem;
+  }
+
+  .field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .notes-field {
+    margin-top: 0.5rem;
+  }
+
+  .field-label {
+    font-family: var(--font-sans);
+    font-size: 0.62rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+  }
+
+  .opt {
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    text-transform: none;
+    color: #B0B3AE;
+  }
+
+  .field-input {
+    font-family: var(--font-sans);
+    font-size: 0.88rem;
+    font-weight: 300;
+    color: var(--color-text);
+    background: transparent;
+    border: none;
+    border-bottom: 1.5px solid #D4D6D0;
+    padding: 0.6rem 0;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 0;
+    appearance: none;
+    -webkit-appearance: none;
+    transition: border-color 0.2s ease;
+  }
+
+  .field-input:focus {
+    border-bottom-color: var(--color-teal);
+  }
+
+  .field-input::placeholder {
+    color: #C0C3BC;
+  }
+
+  .field-textarea {
+    resize: vertical;
+    min-height: 90px;
+    line-height: 1.7;
+  }
+
+  /* Select wrapper */
+  .select-wrap {
+    position: relative;
+  }
+
+  .select-wrap .field-input {
+    padding-right: 1.5rem;
+    cursor: pointer;
+  }
+
+  .select-arrow {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.7rem;
+    color: var(--color-text-muted);
+    pointer-events: none;
+  }
+
+  /* ─── Submit ─────────────────────────────────────────── */
+  .submit-block {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #E0E1DD;
+  }
+
+  .submit-btn {
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background-color: var(--color-dark);
+    color: #E0E1DD;
+    border: none;
+    padding: 1rem 2.25rem;
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.25s ease, gap 0.25s ease;
+  }
+
+  .submit-btn:hover {
+    background-color: var(--color-teal);
+    gap: 1.25rem;
+  }
+
+  .submit-text {
+    display: block;
+  }
+
+  .submit-arrow {
+    font-size: 0.9rem;
+    transition: transform 0.25s ease;
+  }
+
+  .submit-btn:hover .submit-arrow {
+    transform: translateX(4px);
+  }
+
+  .submit-note {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 300;
+    line-height: 1.75;
+    color: #A0A49C;
+    margin: 0;
+    max-width: 440px;
+  }
+
+  /* ─── Responsive ─────────────────────────────────────── */
+  @media (max-width: 900px) {
+    .booking-shell {
+      grid-template-columns: 1fr;
+    }
+
+    .panel-left {
+      position: static;
+      height: auto;
+    }
+
+    .panel-left-inner {
+      padding: 3rem 2rem 2.5rem;
+      gap: 2rem;
+      flex-direction: column;
+    }
+
+    .panel-deco {
+      display: none;
+    }
+
+    .panel-right {
+      padding: 3rem 2rem 5rem;
+    }
+
+    .fields-row,
+    .fields-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .submit-btn {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+
+  @media (min-width: 550px) and (max-width: 900px) {
+    .panel-left-inner{
+        flex-direction: row;
+    }
+    .info-block {
+        padding-left: 0;
+        border-left: 0;
+        padding-right: 1rem;
+        border-right: 1.5px solid #1B263B;
+    }
+   }
+</style>
