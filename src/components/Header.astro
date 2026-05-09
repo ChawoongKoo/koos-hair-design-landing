@@ -19,6 +19,7 @@
 
   <div class="header-ctas">
     <a class="cta-outline contact-button">Contact Us</a>
+    <a class="cta-filled book-button" href="/booking">Book</a>
   </div>
 </header>
 
@@ -108,6 +109,26 @@
     flex-shrink: 0;
   }
 
+  .cta-filled {
+    background-color: var(--color-tangerine-washed);
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 0.45rem 1.2rem;
+    font-family: var(--font-sans);
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+
+  .cta-filled:hover {
+    background-color: var(--color-tangerine);
+  }
+
   .cta-outline {
     color: var(--color-teal-light);
     border: 1.5px solid var(--color-teal-light);
@@ -131,8 +152,11 @@
     .header {
       padding: 0 1.5rem;
     }
-    .header-ctas {
+    .nav-links {
       display: none;
+    }
+    .header-ctas {
+      display: flex;
     }
   }
 </style>
@@ -140,10 +164,14 @@
 <script>
   document.querySelectorAll('.contact-button').forEach(el => {
     el.addEventListener('click', () => {
-      document.getElementById('visiting')?.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
+      if (window.location.pathname === '/') {
+        document.getElementById('visiting')?.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+      else {
+        window.location.href = '/#visiting';}
     });
   });
 
