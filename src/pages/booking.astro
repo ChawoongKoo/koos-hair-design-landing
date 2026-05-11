@@ -49,7 +49,7 @@ const pageTitle = "Book an Appointment | Koo's Wigs & Design"
 
   <!-- ═══ RIGHT PANEL ═══ -->
   <main class="panel-right">
-    <form class="booking-form" id="booking-form" novalidate method="POST" action="/api/booking">
+    <form class="booking-form" id="booking-form" method="POST" action="/api/booking">
 
       <!-- Step 1: Service -->
       <div class="step">
@@ -63,7 +63,7 @@ const pageTitle = "Book an Appointment | Koo's Wigs & Design"
 
         <div class="service-grid">
           <label class="svc-card">
-            <input type="radio" name="service" value="wigs" />
+            <input type="radio" name="service" value="wigs" required/>
             <div class="svc-inner">
               <div class="svc-check"></div>
               <p class="svc-title serif-display">Wigs & Extensions</p>
@@ -107,12 +107,12 @@ const pageTitle = "Book an Appointment | Koo's Wigs & Design"
         <div class="fields-row">
           <div class="field">
             <label class="field-label" for="appt-date">Preferred Date</label>
-            <input class="field-input" type="date" id="appt-date" name="date" />
+            <input class="field-input" type="date" id="appt-date" name="date" required/>
           </div>
           <div class="field">
             <label class="field-label" for="appt-time">Preferred Time</label>
             <div class="select-wrap">
-              <select class="field-input" id="appt-time" name="time">
+              <select class="field-input" id="appt-time" name="time" required>
                 <option value="" disabled selected>Select a time</option>
                 <optgroup label="Morning">
                   <option value="10:00">10:00 AM</option>
@@ -160,19 +160,19 @@ const pageTitle = "Book an Appointment | Koo's Wigs & Design"
         <div class="fields-grid">
           <div class="field">
             <label class="field-label" for="first-name">First Name</label>
-            <input class="field-input" type="text" id="first-name" name="first_name" placeholder="Jane" />
+            <input class="field-input" type="text" id="first-name" name="first_name" placeholder="Jane" required/>
           </div>
           <div class="field">
             <label class="field-label" for="last-name">Last Name</label>
-            <input class="field-input" type="text" id="last-name" name="last_name" placeholder="Doe" />
+            <input class="field-input" type="text" id="last-name" name="last_name" placeholder="Doe" required/>
           </div>
           <div class="field">
             <label class="field-label" for="email">Email Address</label>
-            <input class="field-input" type="email" id="email" name="email" placeholder="jane@example.com" />
+            <input class="field-input" type="email" id="email" name="email" placeholder="jane@example.com" required/>
           </div>
           <div class="field">
             <label class="field-label" for="phone">Phone Number</label>
-            <input class="field-input" type="tel" id="phone" name="phone_number" placeholder="(301) 555-0100" />
+            <input class="field-input" type="tel" id="phone" name="phone_number" placeholder="(301) 555-0100" required/>
           </div>
         </div>
 
