@@ -26,3 +26,4 @@ pnpm-debug.log*
 # Claude screenshots
 .claude_sc/
 .playwright-mcp/
+.vercel
