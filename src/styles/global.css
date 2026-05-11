@@ -97,7 +97,8 @@
   --color-text: #1B263B;
   --color-text-muted: #415A77;
   --color-tangerine-washed: #C79989;
-  --color-tangerine: #FF9873;
+  /* --color-tangerine: #FF9873; */
+  --color-tangerine: #FF8559;
   --font-serif: "Cormorant Garamond", Georgia, serif;
   --font-sans: "Raleway", sans-serif;
 }
