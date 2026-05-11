@@ -1,5 +1,11 @@
 import type {APIRoute} from 'astro';
+import { createClient } from '@supabase/supabase-js';
 export const prerender = false;
+
+const supabase = createClient(
+    import.meta.env.SUPABASE_URL,
+    import.meta.env.SUPABASE_SERVER_ROLE_KEY
+)
 
 export const GET: APIRoute = () => {
     let x = 2;
@@ -12,13 +18,20 @@ export const GET: APIRoute = () => {
 };
 
 export const POST: APIRoute = async ({request}) => {
-    console.log('Content-Type:', request.headers.get('content-type'));
     const formData = await request.formData();
     const data = Object.fromEntries(formData.entries());
-    console.log({
-        name: formData.get('firstName')
+
+    await supabase.from('bookings').insert({
+        service: data.service,
+        date: data.date,
+        time: data.time,
+        first_name: data.first_name,
+        last_name: data.last_name,
+        email: data.email,
+        phone_number: data.phone_number,
+        notes: data.notes
     });
-    // Process the form data here
+
     return new Response( JSON.stringify(data),
         {headers: {'content-type': 'application/json'}}
     );
