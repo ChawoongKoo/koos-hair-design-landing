@@ -1,0 +1,165 @@
+<div class="step">
+  <div class="step-header">
+    <span class="step-num">02</span>
+    <div>
+      <p class="step-label">Date & Time</p>
+      <h2 class="step-heading serif-display">When would you like to come in?</h2>
+    </div>
+  </div>
+
+  <div class="fields-row">
+    <div class="field">
+      <label class="field-label" for="appt-date">Preferred Date</label>
+      <input class="field-input" type="date" id="appt-date" name="date" required/>
+    </div>
+    <div class="field">
+      <label class="field-label" for="appt-time">Preferred Time</label>
+      <div class="select-wrap">
+        <select class="field-input" id="appt-time" name="time" required>
+          <option value="" disabled selected>Select a time</option>
+          <optgroup label="Morning">
+            <option value="10:00">10:00 AM</option>
+            <option value="10:30">10:30 AM</option>
+            <option value="11:00">11:00 AM</option>
+            <option value="11:30">11:30 AM</option>
+          </optgroup>
+          <optgroup label="Afternoon">
+            <option value="12:00">12:00 PM</option>
+            <option value="12:30">12:30 PM</option>
+            <option value="13:00">1:00 PM</option>
+            <option value="13:30">1:30 PM</option>
+            <option value="14:00">2:00 PM</option>
+            <option value="14:30">2:30 PM</option>
+            <option value="15:00">3:00 PM</option>
+            <option value="15:30">3:30 PM</option>
+            <option value="16:00">4:00 PM</option>
+            <option value="16:30">4:30 PM</option>
+          </optgroup>
+          <optgroup label="Evening">
+            <option value="17:00">5:00 PM</option>
+            <option value="17:30">5:30 PM</option>
+            <option value="18:00">6:00 PM</option>
+            <option value="18:30">6:30 PM</option>
+            <option value="19:00">7:00 PM</option>
+            <option value="19:30">7:30 PM</option>
+          </optgroup>
+        </select>
+        <span class="select-arrow">↓</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .step {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .step-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .step-num {
+    font-family: var(--font-serif);
+    font-size: 3.5rem;
+    font-weight: 300;
+    color: #E0E1DD;
+    line-height: 1;
+    flex-shrink: 0;
+    margin-top: -0.4rem;
+  }
+
+  .step-label {
+    font-family: var(--font-sans);
+    font-size: 0.62rem;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--color-teal);
+    margin: 0 0 0.35rem;
+  }
+
+  .step-heading {
+    font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+    font-weight: 400;
+    color: var(--color-text);
+    margin: 0;
+    line-height: 1.15;
+  }
+
+  .fields-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .field-label {
+    font-family: var(--font-sans);
+    font-size: 0.62rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+  }
+
+  .field-input {
+    font-family: var(--font-sans);
+    font-size: 0.88rem;
+    font-weight: 300;
+    color: var(--color-text);
+    background: transparent;
+    border: none;
+    border-bottom: 1.5px solid #D4D6D0;
+    padding: 0.6rem 0;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 0;
+    appearance: none;
+    -webkit-appearance: none;
+    transition: border-color 0.2s ease;
+  }
+
+  .field-input:focus {
+    border-bottom-color: var(--color-teal);
+  }
+
+  .field-input::placeholder {
+    color: #C0C3BC;
+  }
+
+  .select-wrap {
+    position: relative;
+  }
+
+  .select-wrap .field-input {
+    padding-right: 1.5rem;
+    cursor: pointer;
+  }
+
+  .select-arrow {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.7rem;
+    color: var(--color-text-muted);
+    pointer-events: none;
+  }
+
+  @media (max-width: 900px) {
+    .fields-row {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

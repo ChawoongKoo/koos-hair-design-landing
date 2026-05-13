@@ -1,0 +1,215 @@
+<div class="step">
+  <div class="step-header">
+    <span class="step-num">03</span>
+    <div>
+      <p class="step-label">Your Information</p>
+      <h2 class="step-heading serif-display">How do we reach you?</h2>
+    </div>
+  </div>
+
+  <div class="fields-grid">
+    <div class="field">
+      <label class="field-label" for="first-name">First Name</label>
+      <input class="field-input" type="text" id="first-name" name="first_name" placeholder="Jane" required/>
+    </div>
+    <div class="field">
+      <label class="field-label" for="last-name">Last Name</label>
+      <input class="field-input" type="text" id="last-name" name="last_name" placeholder="Doe" required/>
+    </div>
+    <div class="field">
+      <label class="field-label" for="email">Email Address</label>
+      <input class="field-input" type="email" id="email" name="email" placeholder="jane@example.com" required/>
+    </div>
+    <div class="field">
+      <label class="field-label" for="phone">Phone Number</label>
+      <input class="field-input" type="tel" id="phone" name="phone_number" placeholder="(301) 555-0100" required/>
+    </div>
+  </div>
+
+  <div class="field notes-field">
+    <label class="field-label" for="notes">Additional Notes <span class="opt">(optional)</span></label>
+    <textarea class="field-input field-textarea" id="notes" name="notes"
+      placeholder="Any special requests, hair type details, or things we should know before your visit..."></textarea>
+  </div>
+</div>
+
+<div class="submit-block">
+  <button type="submit" class="submit-btn">
+    <span class="submit-text">Request Appointment</span>
+    <span class="submit-arrow">→</span>
+  </button>
+  <p class="submit-note">
+    No payment required to book. We'll confirm your appointment via email or phone within 24 hours.
+  </p>
+</div>
+
+<style>
+  .step {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .step-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .step-num {
+    font-family: var(--font-serif);
+    font-size: 3.5rem;
+    font-weight: 300;
+    color: #E0E1DD;
+    line-height: 1;
+    flex-shrink: 0;
+    margin-top: -0.4rem;
+  }
+
+  .step-label {
+    font-family: var(--font-sans);
+    font-size: 0.62rem;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--color-teal);
+    margin: 0 0 0.35rem;
+  }
+
+  .step-heading {
+    font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+    font-weight: 400;
+    color: var(--color-text);
+    margin: 0;
+    line-height: 1.15;
+  }
+
+  .fields-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem 2rem;
+  }
+
+  .field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .notes-field {
+    margin-top: 0.5rem;
+  }
+
+  .field-label {
+    font-family: var(--font-sans);
+    font-size: 0.62rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+  }
+
+  .opt {
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    text-transform: none;
+    color: #B0B3AE;
+  }
+
+  .field-input {
+    font-family: var(--font-sans);
+    font-size: 0.88rem;
+    font-weight: 300;
+    color: var(--color-text);
+    background: transparent;
+    border: none;
+    border-bottom: 1.5px solid #D4D6D0;
+    padding: 0.6rem 0;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 0;
+    appearance: none;
+    -webkit-appearance: none;
+    transition: border-color 0.2s ease;
+  }
+
+  .field-input:focus {
+    border-bottom-color: var(--color-teal);
+  }
+
+  .field-input::placeholder {
+    color: #C0C3BC;
+  }
+
+  .field-textarea {
+    resize: vertical;
+    min-height: 90px;
+    line-height: 1.7;
+  }
+
+  .submit-block {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #E0E1DD;
+  }
+
+  .submit-btn {
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background-color: var(--color-dark);
+    color: #E0E1DD;
+    border: none;
+    padding: 1rem 2.25rem;
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.25s ease, gap 0.25s ease;
+  }
+
+  .submit-btn:hover {
+    background-color: var(--color-teal);
+    gap: 1.25rem;
+  }
+
+  .submit-text {
+    display: block;
+  }
+
+  .submit-arrow {
+    font-size: 0.9rem;
+    transition: transform 0.25s ease;
+  }
+
+  .submit-btn:hover .submit-arrow {
+    transform: translateX(4px);
+  }
+
+  .submit-note {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 300;
+    line-height: 1.75;
+    color: #A0A49C;
+    margin: 0;
+    max-width: 440px;
+  }
+
+  @media (max-width: 900px) {
+    .fields-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .submit-btn {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+</style>

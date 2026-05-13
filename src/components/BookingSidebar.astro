@@ -1,0 +1,192 @@
+<aside class="panel-left">
+  <div class="panel-left-inner">
+
+    <div class="panel-top">
+      <p class="panel-eyebrow">Koo's Wigs & Design</p>
+      <h1 class="panel-title">Book an<br /><em>Appointment</em></h1>
+      <div class="panel-rule"></div>
+      <p class="panel-sub">
+        Reserve your visit online. We confirm within 24 hours — or call us directly to book same-day.
+      </p>
+    </div>
+
+    <div class="panel-info">
+      <div class="info-block">
+        <p class="info-label">Location</p>
+        <p class="info-val">Wheaton Mall<br />11160 Veirs Mill Rd<br />Wheaton, MD 20902</p>
+      </div>
+      <div class="info-block">
+        <p class="info-label">Hours</p>
+        <p class="info-val">
+          Mon – Thu &nbsp; 10 AM – 8 PM<br />
+          Fri – Sat &nbsp;&nbsp;&nbsp; 10 AM – 9 PM<br />
+          Sun &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 11 AM – 7 PM
+        </p>
+      </div>
+      <div class="info-block">
+        <p class="info-label">Phone</p>
+        <a href="tel:3019334522" class="info-phone">(301) 933-4522</a>
+      </div>
+    </div>
+
+    <div class="panel-deco">
+      <span class="deco-num">01</span>
+      <span class="deco-num">02</span>
+      <span class="deco-num">03</span>
+    </div>
+
+  </div>
+</aside>
+
+<style>
+  .panel-left {
+    background-color: var(--color-dark);
+    position: sticky;
+    top: 72px;
+    height: calc(100vh - 72px);
+    overflow: hidden;
+  }
+
+  .panel-left-inner {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3.5rem 3rem 3rem;
+    position: relative;
+  }
+
+  .panel-eyebrow {
+    font-family: var(--font-sans);
+    font-size: 0.62rem;
+    font-weight: 500;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--color-teal-light);
+    margin: 0 0 1.5rem;
+  }
+
+  .panel-title {
+    font-family: var(--font-serif);
+    font-size: clamp(2.8rem, 3.5vw, 4rem);
+    font-weight: 300;
+    color: #E0E1DD;
+    line-height: 1.05;
+    margin: 0 0 1.5rem;
+    letter-spacing: -0.01em;
+  }
+
+  .panel-title em {
+    font-style: italic;
+    color: var(--color-teal-light);
+  }
+
+  .panel-rule {
+    width: 48px;
+    height: 1px;
+    background-color: var(--color-teal);
+    margin-bottom: 1.5rem;
+  }
+
+  .panel-sub {
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    font-weight: 300;
+    line-height: 1.85;
+    color: #415A77;
+    margin: 0;
+    max-width: 280px;
+  }
+
+  .panel-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .info-block {
+    padding-left: 1rem;
+    border-left: 1.5px solid #1B263B;
+  }
+
+  .info-label {
+    font-family: var(--font-sans);
+    font-size: 0.6rem;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--color-teal);
+    margin: 0 0 0.4rem;
+  }
+
+  .info-val {
+    font-family: var(--font-sans);
+    font-size: 0.78rem;
+    font-weight: 300;
+    line-height: 1.75;
+    color: #778DA9;
+    margin: 0;
+  }
+
+  .info-phone {
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: var(--color-teal-light);
+    transition: color 0.2s;
+  }
+
+  .info-phone:hover {
+    color: #E0E1DD;
+  }
+
+  .panel-deco {
+    position: absolute;
+    bottom: -1rem;
+    right: -0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0;
+    pointer-events: none;
+  }
+
+  .deco-num {
+    font-family: var(--font-serif);
+    font-size: 5.5rem;
+    font-weight: 300;
+    color: rgba(65, 90, 119, 0.08);
+    line-height: 1;
+    letter-spacing: -0.03em;
+  }
+
+  @media (max-width: 900px) {
+    .panel-left {
+      position: static;
+      height: auto;
+    }
+
+    .panel-left-inner {
+      padding: 3rem 2rem 2.5rem;
+      gap: 2rem;
+      flex-direction: column;
+    }
+
+    .panel-deco {
+      display: none;
+    }
+  }
+
+  @media (min-width: 550px) and (max-width: 900px) {
+    .panel-left-inner {
+      flex-direction: row;
+    }
+
+    .info-block {
+      padding-left: 0;
+      border-left: 0;
+      padding-right: 1rem;
+      border-right: 1.5px solid #1B263B;
+    }
+  }
+</style>

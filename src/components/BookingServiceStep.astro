@@ -1,0 +1,185 @@
+<div class="step">
+  <div class="step-header">
+    <span class="step-num">01</span>
+    <div>
+      <p class="step-label">Service</p>
+      <h2 class="step-heading serif-display">What can we do for you?</h2>
+    </div>
+  </div>
+
+  <div class="service-grid">
+    <label class="svc-card">
+      <input type="radio" name="service" value="wigs" required/>
+      <div class="svc-inner">
+        <div class="svc-check"></div>
+        <p class="svc-title serif-display">Wigs & Extensions</p>
+        <p class="svc-desc">Fitting, styling, and consultation for wigs and hair extensions of all types.</p>
+      </div>
+    </label>
+
+    <label class="svc-card">
+      <input type="radio" name="service" value="styling" />
+      <div class="svc-inner">
+        <div class="svc-check"></div>
+        <p class="svc-title serif-display">Hair Styling</p>
+        <p class="svc-desc">Cuts, braids, rows, perms, and more with our professional stylists.</p>
+        <div class="svc-tags">
+          <span>Cuts</span><span>Braids</span><span>Rows</span><span>Perms</span>
+        </div>
+      </div>
+    </label>
+
+    <label class="svc-card">
+      <input type="radio" name="service" value="massage" />
+      <div class="svc-inner">
+        <div class="svc-check"></div>
+        <p class="svc-title serif-display">Massage Services</p>
+        <p class="svc-desc">Relaxation and therapeutic massage by our licensed massage therapists.</p>
+      </div>
+    </label>
+  </div>
+</div>
+
+<style>
+  .step {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .step-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .step-num {
+    font-family: var(--font-serif);
+    font-size: 3.5rem;
+    font-weight: 300;
+    color: #E0E1DD;
+    line-height: 1;
+    flex-shrink: 0;
+    margin-top: -0.4rem;
+  }
+
+  .step-label {
+    font-family: var(--font-sans);
+    font-size: 0.62rem;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--color-teal);
+    margin: 0 0 0.35rem;
+  }
+
+  .step-heading {
+    font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+    font-weight: 400;
+    color: var(--color-text);
+    margin: 0;
+    line-height: 1.15;
+  }
+
+  .service-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .svc-card {
+    display: block;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .svc-card input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .svc-inner {
+    padding: 1.4rem 1.6rem;
+    border: 1.5px solid #E0E1DD;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+    position: relative;
+  }
+
+  .svc-check {
+    position: absolute;
+    top: 1.2rem;
+    right: 1.4rem;
+    width: 18px;
+    height: 18px;
+    border: 1.5px solid #E0E1DD;
+    border-radius: 50%;
+    transition: border-color 0.2s, background-color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .svc-check::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--color-teal);
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+
+  .svc-card:hover .svc-inner {
+    border-color: var(--color-teal-light);
+  }
+
+  .svc-card:has(input:checked) .svc-inner {
+    border-color: var(--color-teal);
+    background-color: #f0f2f0;
+  }
+
+  .svc-card:has(input:checked) .svc-check {
+    border-color: var(--color-teal);
+  }
+
+  .svc-card:has(input:checked) .svc-check::after {
+    opacity: 1;
+  }
+
+  .svc-title {
+    font-size: 1.35rem;
+    color: var(--color-text);
+    margin: 0 0 0.3rem;
+    padding-right: 2rem;
+  }
+
+  .svc-desc {
+    font-family: var(--font-sans);
+    font-size: 0.78rem;
+    font-weight: 300;
+    color: var(--color-text-muted);
+    line-height: 1.65;
+    margin: 0 0 0.75rem;
+  }
+
+  .svc-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 0.75rem;
+  }
+
+  .svc-tags span {
+    font-family: var(--font-sans);
+    font-size: 0.62rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-teal);
+  }
+
+  .svc-tags span::before {
+    content: "— ";
+    color: #C8CAC5;
+  }
+</style>
