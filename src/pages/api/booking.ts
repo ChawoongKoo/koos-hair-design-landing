@@ -20,18 +20,40 @@ export const GET: APIRoute = () => {
 export const POST: APIRoute = async ({request}) => {
     const formData = await request.formData();
     const data = Object.fromEntries(formData.entries());
+    const origin = new URL(request.url).origin;
+    console.log('got to booking function')
+    // await supabase.from('bookings').insert({
+    //     service: data.service,
+    //     date: data.date,
+    //     time: data.time,
+    //     first_name: data.first_name,
+    //     last_name: data.last_name,
+    //     email: data.email,
+    //     phone_number: data.phone_number,
+    //     notes: data.notes
+    // });
+    
+    await fetch(`${origin}/api/set-appointment`,
+        {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                service: data.service,
+                date: data.date,
+                time: data.time,
+                first_name: data.first_name,
+                last_name: data.last_name,
+                email: data.email,
+                phone_number: data.phone_number,
+                notes: data.notes
+            }),
+        }
+    )
 
-    await supabase.from('bookings').insert({
-        service: data.service,
-        date: data.date,
-        time: data.time,
-        first_name: data.first_name,
-        last_name: data.last_name,
-        email: data.email,
-        phone_number: data.phone_number,
-        notes: data.notes
-    });
-
+    // return new Response(JSON.stringify({ success: true }), {
+    //         status: 200,
+    //         headers: { 'content-type': 'application/json' }
+    //     });
     return new Response( JSON.stringify(data),
         {headers: {'content-type': 'application/json'}}
     );
