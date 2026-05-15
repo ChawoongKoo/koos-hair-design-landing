@@ -1,4 +1,3 @@
-import type {APIRoute} from 'astro';
 import { google } from 'googleapis';
 export const prerender = false;
 
@@ -6,7 +5,6 @@ export const prerender = false;
 const auth = new google.auth.GoogleAuth({
     credentials: JSON.parse(import.meta.env.GOOGLE_SERVICE_ACCOUNT_KEY!), // or use env var
     // keyFile: './koos-wigs-7cac1743d5d3.json',
-    // credentials: import.meta.env.GOOGLE_SERVICE_ACCOUNT_KEY!, // or use env var
     scopes: ['https://www.googleapis.com/auth/calendar'],
 });
 
