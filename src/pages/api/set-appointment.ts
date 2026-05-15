@@ -1,18 +1,24 @@
 import type {APIRoute} from 'astro';
 import { google } from 'googleapis';
 export const prerender = false;
-console.log('trying to authenticate')
-console.log(import.meta.env.GOOGLE_SERVICE_ACCOUNT_KEY ? 'KEY EXISTS' : 'KEY MISSING')
 
-//authenticate service account
-const auth = new google.auth.GoogleAuth({
-    credentials: JSON.parse(import.meta.env.GOOGLE_SERVICE_ACCOUNT_KEY!), // or use env var
-    // keyFile: './koos-wigs-7cac1743d5d3.json',
-    // credentials: import.meta.env.GOOGLE_SERVICE_ACCOUNT_KEY!, // or use env var
-    scopes: ['https://www.googleapis.com/auth/calendar'],
-});
-console.log('authenticated successfully')
+// //authenticate service account
+// const auth = new google.auth.GoogleAuth({
+//     credentials: JSON.parse(import.meta.env.GOOGLE_SERVICE_ACCOUNT_KEY!), // or use env var
+//     // keyFile: './koos-wigs-7cac1743d5d3.json',
+//     // credentials: import.meta.env.GOOGLE_SERVICE_ACCOUNT_KEY!, // or use env var
+//     scopes: ['https://www.googleapis.com/auth/calendar'],
+// });
+
 export const POST: APIRoute = async ({request}) => {
+    //authenticate service account
+    const auth = new google.auth.GoogleAuth({
+        credentials: JSON.parse(import.meta.env.GOOGLE_SERVICE_ACCOUNT_KEY!), // or use env var
+        // keyFile: './koos-wigs-7cac1743d5d3.json',
+        // credentials: import.meta.env.GOOGLE_SERVICE_ACCOUNT_KEY!, // or use env var
+        scopes: ['https://www.googleapis.com/auth/calendar'],
+    });
+
     const { service, first_name, last_name, email, phone_number, date, time, notes } = await request.json();
 
     //create calendar object
