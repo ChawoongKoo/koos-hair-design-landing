@@ -27,3 +27,6 @@ pnpm-debug.log*
 .claude_sc/
 .playwright-mcp/
 .vercel
+
+# google api credentials
+koos-wigs-7cac1743d5d3.json
