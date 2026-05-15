@@ -2,6 +2,8 @@ import type {APIRoute} from 'astro';
 import { google } from 'googleapis';
 export const prerender = false;
 console.log('trying to authenticate')
+console.log(import.meta.env.GOOGLE_SERVICE_ACCOUNT_KEY ? 'KEY EXISTS' : 'KEY MISSING')
+
 //authenticate service account
 const auth = new google.auth.GoogleAuth({
     credentials: JSON.parse(import.meta.env.GOOGLE_SERVICE_ACCOUNT_KEY!), // or use env var
