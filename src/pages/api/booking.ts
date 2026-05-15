@@ -21,7 +21,7 @@ export const POST: APIRoute = async ({request}) => {
     const formData = await request.formData();
     const data = Object.fromEntries(formData.entries());
     const origin = new URL(request.url).origin;
-    console.log('got to booking function')
+
     // await supabase.from('bookings').insert({
     //     service: data.service,
     //     date: data.date,
