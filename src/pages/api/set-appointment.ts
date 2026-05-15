@@ -2,24 +2,16 @@ import type {APIRoute} from 'astro';
 import { google } from 'googleapis';
 export const prerender = false;
 
-// //authenticate service account
-// const auth = new google.auth.GoogleAuth({
-//     credentials: JSON.parse(import.meta.env.GOOGLE_SERVICE_ACCOUNT_KEY!), // or use env var
-//     // keyFile: './koos-wigs-7cac1743d5d3.json',
-//     // credentials: import.meta.env.GOOGLE_SERVICE_ACCOUNT_KEY!, // or use env var
-//     scopes: ['https://www.googleapis.com/auth/calendar'],
-// });
+//authenticate service account
+const auth = new google.auth.GoogleAuth({
+    credentials: JSON.parse(import.meta.env.GOOGLE_SERVICE_ACCOUNT_KEY!), // or use env var
+    // keyFile: './koos-wigs-7cac1743d5d3.json',
+    // credentials: import.meta.env.GOOGLE_SERVICE_ACCOUNT_KEY!, // or use env var
+    scopes: ['https://www.googleapis.com/auth/calendar'],
+});
 
-export const POST: APIRoute = async ({request}) => {
-    //authenticate service account
-    const auth = new google.auth.GoogleAuth({
-        credentials: JSON.parse(import.meta.env.GOOGLE_SERVICE_ACCOUNT_KEY!), // or use env var
-        // keyFile: './koos-wigs-7cac1743d5d3.json',
-        // credentials: import.meta.env.GOOGLE_SERVICE_ACCOUNT_KEY!, // or use env var
-        scopes: ['https://www.googleapis.com/auth/calendar'],
-    });
-
-    const { service, first_name, last_name, email, phone_number, date, time, notes } = await request.json();
+export const setAppointment = async (data:any) => {
+    const { service, first_name, last_name, email, phone_number, date, time, notes } = data;
 
     //create calendar object
     const calendar = google.calendar({ version: 'v3', auth });

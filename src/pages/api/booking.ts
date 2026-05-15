@@ -1,5 +1,6 @@
 import type {APIRoute} from 'astro';
 import { createClient } from '@supabase/supabase-js';
+import { setAppointment } from './set-appointment';
 export const prerender = false;
 
 const supabase = createClient(
@@ -33,22 +34,24 @@ export const POST: APIRoute = async ({request}) => {
     //     notes: data.notes
     // });
     
-    await fetch(`${origin}/api/set-appointment`,
-        {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                service: data.service,
-                date: data.date,
-                time: data.time,
-                first_name: data.first_name,
-                last_name: data.last_name,
-                email: data.email,
-                phone_number: data.phone_number,
-                notes: data.notes
-            }),
-        }
-    )
+    // await fetch(`${origin}/api/set-appointment`,
+    //     {
+    //         method: 'POST',
+    //         headers: { 'Content-Type': 'application/json' },
+    //         body: JSON.stringify({
+    //             service: data.service,
+    //             date: data.date,
+    //             time: data.time,
+    //             first_name: data.first_name,
+    //             last_name: data.last_name,
+    //             email: data.email,
+    //             phone_number: data.phone_number,
+    //             notes: data.notes
+    //         }),
+    //     }
+    // )
+
+    await setAppointment(data);
 
     // return new Response(JSON.stringify({ success: true }), {
     //         status: 200,
