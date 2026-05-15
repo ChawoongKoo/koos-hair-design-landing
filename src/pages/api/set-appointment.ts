@@ -1,7 +1,7 @@
 import type {APIRoute} from 'astro';
 import { google } from 'googleapis';
 export const prerender = false;
-
+console.log('trying to authenticate')
 //authenticate service account
 const auth = new google.auth.GoogleAuth({
     credentials: JSON.parse(import.meta.env.GOOGLE_SERVICE_ACCOUNT_KEY!), // or use env var
@@ -9,7 +9,7 @@ const auth = new google.auth.GoogleAuth({
     // credentials: import.meta.env.GOOGLE_SERVICE_ACCOUNT_KEY!, // or use env var
     scopes: ['https://www.googleapis.com/auth/calendar'],
 });
-
+console.log('authenticated successfully')
 export const POST: APIRoute = async ({request}) => {
     const { service, first_name, last_name, email, phone_number, date, time, notes } = await request.json();
 
